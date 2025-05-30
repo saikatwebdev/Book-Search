@@ -1,3 +1,24 @@
+// Dark mode and light mode navigator
+
+var icon = document.getElementById('icon');
+
+
+icon.onclick = function(){
+    document.body.classList.toggle('dark-theme'); 
+    if(document.body.classList.contains("dark-theme")){
+       icon.src = "light-mode.png";
+    }else{
+        icon.src = "dark-mode.png"
+    }
+}
+
+
+
+
+
+
+
+
 const books = [
     { title: "Atomic Habits", author: "James Clear", rating: 4.8, year: 2018 },
     { title: "Deep Work", author: "Cal Newport", rating: 4.6, year: 2016 },

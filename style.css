@@ -1,12 +1,71 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
-    background: #f7f7f7;
+    background:var(--primary-color);
   }
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#icon{
+  position: relative;
+  height:25px;
+  width: 25px;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+#icon:hover{
+  transform: translateY(-50%);
+}
+
+
+.icon{
+  position: relative;
+  transition: 0.5s all;
+  width: 25px;
+  height: 25px;
+}
+
+.icon::before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color:var(--secondary-color);
+}
+
+.icon:hover::before{
+  width: 100%;
+}
+
+
+
+nav h2{
+  color: var(--secondary-color);
+}
+
+:root{
+  --primary-color:#edf2fc;
+  --secondary-color: #212121;
+ 
+}
+.dark-theme{
+  --primary-color:#212121;
+  --secondary-color: #edf2fc;
+}
   input, select {
+    background-color: var(--primary-color);
     padding: 8px;
     margin: 5px;
     font-size: 1em;
+    border: 2PX solid;
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
   }
   #results{
     display: grid;
@@ -15,8 +74,9 @@ body {
   }
   .book {
     margin: 10px 0;
-    background: white;
+    background: var(--primary-color);
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    color: var(--secondary-color);
   }
